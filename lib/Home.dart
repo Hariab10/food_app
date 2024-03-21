@@ -251,7 +251,7 @@ class _MyWidgetState extends State<Home> {
                   gradient: LinearGradient(
                     begin: Alignment.bottomCenter,
                     colors: [
-                      Colors.black.withOpacity(0.8),
+                      Colors.black.withOpacity(0.3),
                       Colors.black.withOpacity(0.3),
                     ],
                   ),

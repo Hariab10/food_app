@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:food_app/model/meals.dart';
@@ -95,7 +96,7 @@ class _MenuState extends State<Menu> {
                 gradient: LinearGradient(
                   begin: Alignment.bottomCenter,
                   colors: [
-                    Colors.black.withOpacity(0.8),
+                    Colors.black.withOpacity(0.3),
                     Colors.black.withOpacity(0.3),
                   ],
                 ),
@@ -135,7 +136,10 @@ class _MenuState extends State<Menu> {
             style: const TextStyle(fontWeight: FontWeight.w500),
           ),
           content: SingleChildScrollView(
-            child: Text(
+            child: AutoSizeText(
+              overflowReplacement: Text("…"),
+              maxLines: 3,
+              textAlign: TextAlign.justify,
               meal["strInstructions"],
               style: const TextStyle(fontWeight: FontWeight.w500),
             ),
